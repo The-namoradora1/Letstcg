@@ -18,7 +18,7 @@ export default function Home() {
 
  <Cartaz></Cartaz>
 
-<Image style={styles.imageBanner} source={require('../../../images/00.jpg')} />
+<Image style={styles.imageBanner} source={require('../../../img/00.gif')} />
 
 <FlatList
             data={DATA}
