@@ -1,12 +1,15 @@
-import {View,Image} from "react-native";
-import React from 'react';
+import {View} from "react-native";
 import styles from '../../../style.js';
 import  Cabecalho from '../../componentes/cabecalho/index.js'
 import Pesquisa from '../../componentes/pesquiza/index.js';
 import Cartaz from '../../componentes/emcarta/index.js';
 import Listaplana from '../../componentes/lista/index.js';
 import DATA from "../../../produtos.js";
-import { FlatList } from "react-native-web";
+import { FlatList } from "react-native";
+import Carousel from "../../componentes/carrossel/estilo.js";
+
+
+
 
 export default function Home() {
     return (<View style={styles.container}>
@@ -17,8 +20,8 @@ export default function Home() {
 <Pesquisa></Pesquisa>
 
  <Cartaz></Cartaz>
+<Carousel></Carousel>
 
-<Image style={styles.imageBanner} source={require('../../../img/00.gif')} />
 
 <FlatList
             data={DATA}
