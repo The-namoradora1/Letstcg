@@ -2,7 +2,7 @@ import styles from './index.js';
 import { View, SafeAreaView, StatusBar, Image, Text, Dimensions } from 'react-native';
 import carrossel from '../../../carrossel_data.js';
 import React from 'react';
-import CarouselLib from 'react-native-snap-carousel';
+import Carousel from 'react-native-snap-carousel';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -14,7 +14,7 @@ const Item = ({ item }) => {
     );
 };
 
-const Carousel = () => {
+const Carrossel = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.carouselContainer}>
@@ -24,7 +24,7 @@ const Carousel = () => {
 
                 <Text style={styles.bannerText}>Banner</Text>
 
-                <CarouselLib
+                <Carousel
                     data={carrossel}
                     renderItem={Item}
                     sliderWidth={screenWidth}
@@ -40,5 +40,5 @@ const Carousel = () => {
         </SafeAreaView>
     );
 }
-export default Carousel;
+export default Carrossel;
 

@@ -6,7 +6,7 @@ import Cartaz from '../../componentes/emcarta/index.js';
 import Listaplana from '../../componentes/lista/index.js';
 import DATA from "../../../produtos.js";
 import { FlatList } from "react-native";
-import Carousel from "../../componentes/carrossel/estilo.js";
+import Carrossel from "../../componentes/carrossel/estilo.js";
 
 
 
@@ -20,18 +20,26 @@ export default function Home() {
 <Pesquisa></Pesquisa>
 
  <Cartaz></Cartaz>
-<Carousel></Carousel>
+<Carrossel></Carrossel>
+
 
 
 <FlatList
-            data={DATA}
-            numColumns={2}
-            keyExtractor={item => item.id}
-            renderItem={({ item }) => (
-              
-                <Listaplana titulo ={ item.nome} nota = {item.nota} imagem = {item.image} descricao = {item.descricao} categoria = {item.categoria} duracao = {item.duracao}> </Listaplana>
-            )}
+    data={DATA}
+    numColumns={2}
+    keyExtractor={item => item.id}
+    renderItem={({ item }) => (
+        <Listaplana 
+            titulo={item.nome} 
+            estoque={item.estoque}  
+            imagem={item.image} 
+            descricao={item.descricao} 
+            localEnvio={item.localEnvio}
+            categoria={item.categoria} 
+            preco={item.preco}  
         />
+    )}
+/>
 
     </View>)
 

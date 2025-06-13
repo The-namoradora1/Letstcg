@@ -16,10 +16,6 @@ const carrossel = [
     image: require('./Banner/3.png'),
     alt: "Imagem 3"
   },
-  {
-    id: 4,
-    image: require ('./Banner/2.png'),
-    alt: "Imagem 4"
-  }
+
 ];
 export default carrossel;
